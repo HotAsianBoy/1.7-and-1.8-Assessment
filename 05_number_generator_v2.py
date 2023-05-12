@@ -11,7 +11,7 @@ if 10 <= questions_wanted <= 50:
     print(f"You will be asked {questions_wanted} questions. ")
     valid = True
 else:
-    print("Invalid input. Please enter a number between 10 and 50 to be asked. Thank you. ")
+    print(error)
 
 maori_numbers = {"tahi": "1",
                  "rua": "2",
@@ -53,4 +53,3 @@ elif score == questions_wanted:
     print(f"Perfection! You got {score} out of {questions_wanted} correct.")
 else:
     print(f"Horrible. Even my dog could do better. You got {score} out of {questions_wanted} correct. ")
-
