@@ -26,7 +26,6 @@ maori_numbers = {"tahi": "1",
                  "iwa": "9",
                  "tekau": "10"
                  }
-
 score = 0
 number_list = list(maori_numbers.keys())
 random.shuffle(number_list)
@@ -46,17 +45,6 @@ while quiz_number < questions_asked:
 
 # function to analyze score and conclude results
 if score == questions_asked:
-    print(f"No revision needed! Flawless!You got {score} out of {questions_asked} correct.")
-elif score == 0:
-    print(f"Really! Zero?? Are you trolling?? You got {score} ??? Please do some MORE REVISION ASAP! ")
-elif 10 <= questions_asked <= 20:
-    print(f"Not bad! You got {score} out of {questions_asked} correct.")
-elif 20 <= questions_asked <= 30:
-    print(f"Well Done! You got {score} out of {questions_asked} correct.")
-elif 30 <= questions_asked <= 40:
-    print(f"Wow! You are getting good! You got {score} out of {questions_asked} correct.")
-elif questions_asked >= 40:
-    print(f"What a pro ! You got {score} out of {questions_asked} correct. Revision not needed anymore!")
+    print(f"Perfection! You got {score} out of {questions_asked} correct.")
 else:
-    print(f"Horrible. Even my dog could do better. You got {score} out of {questions_asked} correct. "
-          f"Do more revision please!")
+    print(f"Horrible. Even my dog could do better. You got {score} out of {questions_asked} correct. ")
