@@ -1,5 +1,5 @@
-"""00_Assessment_Base_v2
-Removes few unnecessary things from v1 and improves aesthetics"""
+"""00_Assessment_Base_Final_Version
+Fixes outer scope errors from v2 and make code easier to function and read"""
 # Ask the user if they have played before
 import random
 
@@ -42,6 +42,7 @@ def revision():
     print("Iwa - 9 ")
     print("Tekau - 10 ")
     print()
+    print("Ready now? Let's Go!")
 
     print("*" * 50)
     print()
@@ -55,7 +56,7 @@ def formatter(symbol, text):
     return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
 
 
-# Main routine
+# Main routine go here...
 print(formatter("*", "Welcome to the Maori Revision Game!"))
 print()
 
@@ -86,6 +87,19 @@ def num_check(question_, low, high):
             print(error)
 
 
+# Main routine
+error_ = "Please enter a whole number between 10 and 50 questions to be answered"
+# Ask the user how many questions they want to answer
+questions_asked = int(input("How many questions do you want to answer? (between 10 and 50): "))
+
+# check if the amount is too high/low
+if 10 <= questions_asked <= 50:
+    print(f"You will be asked {questions_asked} questions. ")
+else:
+    print(error_)
+    quit()
+
+
 maori_numbers = {"tahi": "1",
                  "rua": "2",
                  "toru": "3",
@@ -102,10 +116,6 @@ score = 0
 number_list = list(maori_numbers.keys())
 random.shuffle(number_list)
 quiz_number = 0
-
-# Ask the user how many questions they want to answer
-questions_asked = num_check("How many questions do you want to answer? (between 10 and 50): ", 10, 50))
-print(f"You will be asked {questions_asked} questions. ")
 
 # function to start test
 while quiz_number < questions_asked:
