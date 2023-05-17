@@ -1,5 +1,5 @@
-"""00_Assessment_Base_v1
-Combines all the components into a program for the first time"""
+"""00_Assessment_Base_v2
+Removes few unnecessary things from v1 and improves aesthetics"""
 # Ask the user if they have played before
 import random
 
@@ -42,7 +42,8 @@ def revision():
     print("Iwa - 9 ")
     print("Tekau - 10 ")
     print()
-    print("Program continues")
+
+    print("*" * 50)
     print()
 
 
@@ -62,7 +63,7 @@ confidence_ability = yes_no("Are you confident in your Maori number ability? ")
 if confidence_ability == "No":
     revision()
 else:
-    print("Program continues")
+    print("Really??? Then Let's Go!")
 
 
 def num_check(question, low, high):
@@ -120,11 +121,11 @@ while quiz_number < questions_asked:
     question = random.choice(number_list)
     answer = input(f"What is {question} in english?: ")
     if answer.lower() == maori_numbers[question]:
-        print("Correct!")
+        print("*** Correct! ***")
         score += 1
         quiz_number += 1
     else:
-        print(f"Incorrect, the correct translation for that word was {maori_numbers[question]}")
+        print(f"/// Incorrect, the correct translation for that word was {maori_numbers[question]} ///")
         quiz_number += 1
 
 # function to analyze score and conclude results
@@ -145,4 +146,3 @@ else:
           f"Do more revision please!")
 print()
 print(formatter("#", "Thanks for doing your revision! Please come again anytime! Farewell! "))
-
