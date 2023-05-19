@@ -104,7 +104,7 @@ random.shuffle(number_list)
 quiz_number = 0
 
 # Ask the user how many questions they want to answer
-questions_asked = num_check("How many questions do you want to answer? (between 10 and 50): ", 10, 50))
+questions_asked = num_check("How many questions do you want to answer? (between 10 and 50): ", 10, 50)
 print(f"You will be asked {questions_asked} questions. ")
 
 # function to start test
