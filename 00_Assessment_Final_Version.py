@@ -64,7 +64,7 @@ confidence_ability = yes_no("Are you confident in your Maori number ability? ")
 if confidence_ability == "No":
     revision()
 else:
-    print("Really??? Then Let's Go!")
+    print("Okay then, let's see!")
 
 
 def num_check(question_, low, high):
@@ -87,16 +87,16 @@ def num_check(question_, low, high):
             print(error)
 
 
-maori_numbers = {"tahi": "1",
-                 "rua": "2",
-                 "toru": "3",
-                 "wha": "4",
-                 "rima": "5",
-                 "ono": "6",
-                 "whitu": "7",
-                 "waru": "8",
-                 "iwa": "9",
-                 "tekau": "10"
+maori_numbers = {"'Tahi'": "1",
+                 "'Rua'": "2",
+                 "'Toru'": "3",
+                 "'Wha'": "4",
+                 "'Rima'": "5",
+                 "'Ono'": "6",
+                 "'Whitu'": "7",
+                 "'Waru'": "8",
+                 "'Iwa'": "9",
+                 "'Tekau'": "10"
                  }
 
 score = 0
@@ -111,20 +111,20 @@ print(f"You will be asked {questions_asked} questions. ")
 # function to start test
 while quiz_number < questions_asked:
     question = random.choice(number_list)
-    answer_ = input(f"What is {question} in english?: ")
+    answer_ = input(f"What is {question} in English?: ")
     if answer_.lower() == maori_numbers[question]:
-        print("*** Correct! ***")
+        print("*** [Correct!] ***")
         score += 1
         quiz_number += 1
     else:
-        print(f"/// Incorrect, the correct translation for that word was {maori_numbers[question]} ///")
+        print(f"[Incorrect], the correct translation for that word was {maori_numbers[question]}")
         quiz_number += 1
 
 # function to analyze score and conclude results
 if score == questions_asked:
     print(f"No revision needed! Flawless! You got {score} out of {questions_asked} correct.")
 elif score == 0:
-    print(f"Really! Zero?? Are you trolling?? You got {score} ??? Please do some MORE REVISION ASAP! ")
+    print(f"Zero?? Are you trolling?? You got {score} ??? Please do some MORE REVISION ASAP! ")
 elif 10 <= questions_asked <= 20:
     print(f"Not bad! You got {score} out of {questions_asked} correct.")
 elif 20 <= questions_asked <= 30:
@@ -137,4 +137,4 @@ else:
     print(f"Horrible. Even my dog could do better. You got {score} out of {questions_asked} correct. "
           f"Do more revision please!")
 print()
-print(formatter("#", "Thanks for doing your revision! Please come again anytime! Farewell! "))
+print(formatter("^", "Thanks for doing your revision! Please come again anytime! Farewell! "))
